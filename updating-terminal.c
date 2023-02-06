@@ -6,11 +6,11 @@
 
 int main() {
     char table[] = "abcdefghijklmnop";
-    int W = 50, H = 20;
-    for (;;) {
+    int W = 50, H = 20, counter = 0;
+    for (counter = 0; counter < 200; ++counter) {
         for (int y = 0; y < H; ++y) {
             for (int x = 0; x < W; ++x) {
-                putc(table[(x + y) % (sizeof(table) - 1)], stdout);
+                putc(table[(x + y + counter) % (sizeof(table) - 1)], stdout);
             }
             putc('\n', stdout);
         }
