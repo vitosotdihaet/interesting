@@ -1,3 +1,6 @@
+// Works only in Unix systems
+// Basically updates a concrete place of terminal
+
 #include <stdio.h>
 
 int main() {
