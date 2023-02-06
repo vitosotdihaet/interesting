@@ -2,6 +2,7 @@
 // Basically updates a concrete place of terminal
 
 #include <stdio.h>
+#include <unistd.h>
 
 int main() {
     char table[] = "abcdefghijklmnop";
@@ -12,9 +13,10 @@ int main() {
                 putc(table[(x + y) % (sizeof(table) - 1)], stdout);
             }
             putc('\n', stdout);
-        } 
-        printf("\033[%dA", H);
-        printf("\033[%dD", W);
+        }
+        usleep(1000*1000/60);  // 60 fps update
+        printf("\033[%dA", H); // snaps cursor to start of line
+        printf("\033[%dD", W); // delete all chars
     }
 
     return 0;
