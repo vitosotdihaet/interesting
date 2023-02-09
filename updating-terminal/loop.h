@@ -9,8 +9,8 @@
 
     void loop(int W, int H) {
         usleep(1000 * 1000/60); // 60 fps update
-        printf("\033[%dA", H);  // snaps cursor to start of line
-        printf("\033[%dD", W);  // delete all chars
+        printf("\033[%dA", H);  // snap cursor to first written line
+        printf("\r");           // snap to start of line 
     }
 
 #else
