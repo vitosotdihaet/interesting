@@ -22,8 +22,8 @@
         HANDLE StdOut = GetStdHandle(STD_OUTPUT_HANDLE); // get stdout handle
         CONSOLE_SCREEN_BUFFER_INFO lpConsoleScreenBufferInfo;
         GetConsoleScreenBufferInfo(StdOut, &lpConsoleScreenBufferInfo);
-        short y = lpConsoleScreenBufferInfo.dwCursorPosition.Y;
-        SetConsoleCursorPosition(StdOut, (COORD) {0, y - H});
+        COORD c = lpConsoleScreenBufferInfo.dwCursorPosition;
+        SetConsoleCursorPosition(StdOut, (COORD) {c.X, c.Y - H});
     }
 
 #endif
