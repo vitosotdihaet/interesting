@@ -1,5 +1,5 @@
-#ifndef LOOP
-#define LOOP
+#ifndef LOOP_H
+#define LOOP_H
 
 #include <stdio.h>
 
@@ -16,10 +16,10 @@
 #else
 
     #include <windows.h> // used for Sleep in milliseconds
-    
+
     void loop(short W, short H) {
         Sleep(1000./60.); // 60 fps update
-        HANDLE StdOut = GetStdHandle(STD_OUTPUT_HANDLE); // get stdout handle
+        HANDLE StdOut = GetStdHandle(STD_OUTPUT_HANDLE);
         CONSOLE_SCREEN_BUFFER_INFO lpConsoleScreenBufferInfo;
         GetConsoleScreenBufferInfo(StdOut, &lpConsoleScreenBufferInfo);
         COORD c = lpConsoleScreenBufferInfo.dwCursorPosition;
@@ -27,4 +27,5 @@
     }
 
 #endif
-#endif
+
+#endif // LOOP_H
