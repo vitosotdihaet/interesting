@@ -7,7 +7,7 @@
 #include "loop.h"
 
 int main() {
-    int W = 50, H = 20;
+    short W = 50, H = 20;
     sin_example(W, H);
 
     return 0;
