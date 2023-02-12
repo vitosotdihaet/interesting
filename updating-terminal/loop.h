@@ -20,9 +20,9 @@
     void loop(short W, short H) {
         Sleep(1000./60.); // 60 fps update
         HANDLE StdOut = GetStdHandle(STD_OUTPUT_HANDLE);
-        CONSOLE_SCREEN_BUFFER_INFO lpConsoleScreenBufferInfo;
-        GetConsoleScreenBufferInfo(StdOut, &lpConsoleScreenBufferInfo);
-        COORD c = lpConsoleScreenBufferInfo.dwCursorPosition;
+        CONSOLE_SCREEN_BUFFER_INFO csbi;
+        GetConsoleScreenBufferInfo(StdOut, &csbi);
+        COORD c = csbi.dwCursorPosition;
         SetConsoleCursorPosition(StdOut, (COORD) {c.X, c.Y - H});
     }
 
