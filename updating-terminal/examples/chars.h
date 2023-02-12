@@ -3,7 +3,7 @@
 
 #include "../loop.h"
 
-void char_example(int W, int H) {
+void chars_example(int W, int H) {
     char table[] = "abcdefghijklmnop";
     for (int counter = 0; counter < 200; ++counter) {
         for (int y = 0; y < H; ++y) {

@@ -8,7 +8,7 @@
 
 int main() {
     short W = 50, H = 20;
-    sin_example(W, H);
+    chars_example(W, H);
 
     return 0;
 }
