@@ -1,5 +1,5 @@
-#ifndef CHARS
-#define CHARS
+#ifndef CHARS_H
+#define CHARS_H
 
 #include "../loop.h"
 
@@ -16,4 +16,4 @@ void char_example(int W, int H) {
     }
 }
 
-#endif
+#endif // CHARS_H

@@ -1,5 +1,5 @@
-#ifndef SINUS
-#define SINUS
+#ifndef SINUS_H
+#define SINUS_H
 
 #include "../loop.h"
 #include <math.h>
@@ -23,4 +23,4 @@ void sin_example(int W, int H) {
     }
 }
 
-#endif
+#endif // SINUS_H
