@@ -1,5 +1,5 @@
-SRC="updating-terminal.c"
-FLAGS="-lm"
+CC=gcc
+FLAGS=-Wall -Wextra -lm
 
-a:
-	g++ $(SRC) $(FLAGS) -o a.out && ./a.out
+main:
+	$(CC) updating-terminal.c $(FLAGS) -o updating-terminal.out
